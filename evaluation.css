@@ -1,0 +1,119 @@
+.xaxis {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    z-index: 1;
+    border-bottom: 1px solid #777;
+}
+
+.yaxis {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    z-index: 1;
+    border-right: 1px solid #777;
+}
+
+.xplus {
+    position: absolute;
+    font-size: 2rem;
+    top: 50%;
+    left: calc(50% + 250px + 3px);
+    transform: translate(0, -50%);
+    z-index: -1;
+    color: #777;
+    cursor: initial;
+}
+
+.xminus {
+    position: absolute;
+    font-size: 2rem;
+    top: 50%;
+    left: calc(50% - 250px - 3px);
+    transform: translate(-100%, -50%);
+    z-index: -1;
+    color: #777;
+    cursor: initial;
+}
+
+.yplus {
+    position: absolute;
+    font-size: 2rem;
+    top: calc(50% - 250px - 0px);
+    left: 50%;
+    transform: translate(-50%, -100%);
+    z-index: -1;
+    color: #777;
+    cursor: initial;
+}
+
+.yminus {
+    position: absolute;
+    font-size: 2rem;
+    top: calc(50% + 250px + 0px);
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: -1;
+    color: #777;
+    cursor: initial;
+}
+
+#main-container {
+    position: relative;
+    height: 60vh;
+    width: 100%;
+}
+
+#movie {
+    position: absolute;
+    width: 1200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 1s 1s linear;
+}
+
+#russell {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s 1.5s linear;
+}
+
+#russell-rec {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+    cursor: crosshair;
+}
+
+#btn-next-back-group {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s 5s linear;
+}
+
+#russell-point {
+    position: absolute;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+    background: red;
+}
+
+.ended {
+    visibility: hidden !important;
+    display: block;
+    opacity: 0;
+}
+
+#russell.active, #btn-next-back-group.active {
+    visibility: visible;
+    opacity: 1;
+}

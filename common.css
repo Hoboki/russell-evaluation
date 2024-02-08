@@ -1,0 +1,20 @@
+body {
+    margin: 3%;
+    background-color: #ddd;
+}
+
+#profile {
+    color: #777;
+}
+
+.spacer0200 {
+    padding: 2% 0;
+}
+
+.spacer0500 {
+    padding: 5% 0;
+}
+
+.xspacer01 {
+    padding: 0 3px;
+}

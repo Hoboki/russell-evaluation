@@ -1,0 +1,18 @@
+[
+    [
+        {
+            "id": "S1",
+            "glob": "movie_sample/mov1*"
+        },
+        {
+            "id": "S2",
+            "glob": "movie_sample/mov2*"
+        }
+    ],
+    [
+        {
+            "id": "S3",
+            "glob": "movie_sample/mov3*"
+        }
+    ]
+]
