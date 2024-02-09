@@ -1,6 +1,6 @@
 <?php
 include("included/session_start.php");
-$_SESSION["session_idx"]++;
+$_SESSION["mov_idx"] = 0;
 if (isset($_SESSION["code"])) {
     $code = $_SESSION["code"];
 } else {
@@ -14,7 +14,10 @@ if (isset($_SESSION["code"])) {
     <?php include("included/head.php"); ?>
 </head>
 <body>
-    <?php include("included/profile.php"); ?>
+    <?php
+    $php_name = basename(__FILE__);
+    include("included/profile.php");
+    ?>
     <div class="spacer0500"></div>
 
     <div class="text-center">

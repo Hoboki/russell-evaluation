@@ -60,6 +60,10 @@ $params_json = json_encode(array(
     <link rel="stylesheet" type="text/css" href="evaluation.css" />
 </head>
 <body>
+    <?php
+    $php_name = basename(__FILE__);
+    include("included/profile.php");
+    ?>
     <div id="main-container" class="row">
         <video id="movie" controlsList="nodownload nofullscreen noremoteplayback" oncontextmenu="return false;" onended="endMovie(event)" autoplay="autoplay" style="pointer-events: none;"> // muted="muted" controls="false" 
             <source src="<?php echo $movs[$mov_idx]; ?>" />
@@ -80,6 +84,13 @@ $params_json = json_encode(array(
 </html>
 
 <?php include("included/js.php"); 
+if (count($movs) <= $mov_idx+1 && count($sessions) <= $session_idx+1) {
+    $next_php_name = "finish.php";
+} else if (count($movs) <= $mov_idx+1) {
+    $next_php_name = "rest.php";
+} else {
+    $next_php_name = "fixation.php";
+}
 $_SESSION["mov_idx"]++;
 ?>
 <script>

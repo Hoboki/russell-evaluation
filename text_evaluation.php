@@ -23,16 +23,6 @@ $sessions = $mov_info->model[$day];
 $session_idx = get_session_session_idx();
 $mov_idx = get_session_mov_idx();
 $movs = $sessions[$session_idx]["target_word"];
-if (count($movs) <= $mov_idx+1 && count($sessions) <= $session_idx+1) {
-    $next_php_name = "finish.php";
-    // exit;
-} else if (count($movs) <= $mov_idx+1) {
-    $_SESSION["mov_idx"] = 0;
-    $next_php_name = "rest.php";
-    // exit;
-} else {
-    $next_php_name = "fixation.php";
-}
 
 $x = $eval->get($code, $mov_info->getSessionID($day, $session_idx) . "_" . $mov_idx . "_x");
 $y = $eval->get($code, $mov_info->getSessionID($day, $session_idx) . "_" . $mov_idx . "_y");
@@ -60,7 +50,7 @@ $params_json = json_encode(array(
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
-        font-size: 100px;
+        font-size: 120px;
     }
     </style>
 </head>
@@ -70,7 +60,7 @@ $params_json = json_encode(array(
     include("included/profile.php");
     ?>
     <div id="main-container" class="row">
-        <div id="target" class="text-center"><?php echo $movs[$mov_idx] ?></div>
+        <div id="target" class="text-center"><b><?php echo $movs[$mov_idx] ?></b></div>
         <div id="russell">
             <div class="xplus">快</div>
             <div class="xminus">不快</div>
@@ -86,7 +76,12 @@ $params_json = json_encode(array(
 </body>
 </html>
 
-<?php include("included/js.php"); 
+<?php include("included/js.php");
+if (count($movs) <= $mov_idx+1) {
+    $next_php_name = "rest.php";
+} else {
+    $next_php_name = "fixation.php";
+}
 $_SESSION["mov_idx"]++;
 ?>
 <script>

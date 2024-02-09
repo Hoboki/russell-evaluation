@@ -23,7 +23,7 @@ if (isset($_SESSION["code"])) {
     <?php include("included/head.php"); ?>
 </head>
 <body>
-    <div class="spacer01"></div>
+    <div class="spacer0200"></div>
 
     <div class="text-center">
         <?php

@@ -5,6 +5,9 @@ body {
 
 #profile {
     color: #777;
+    position: fixed;
+    right: 10px;
+    top: 10px;
 }
 
 .spacer0200 {

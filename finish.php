@@ -3,6 +3,10 @@
     <?php include("included/head.php"); ?>
 </head>
 <body>
+    <?php
+    $php_name = basename(__FILE__);
+    include("included/profile.php");
+    ?>
     <div class="spacer0500"></div>
 
     <div class="text-center">

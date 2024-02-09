@@ -1,9 +1,6 @@
 <?php
 include("included/session_start.php");
 include("controller/MovieInfoController.php");
-if (isset($_SESSION["code"])) {
-}
-
 $mov_info = new MovieInfoController();
 ?>
 
@@ -12,8 +9,6 @@ $mov_info = new MovieInfoController();
     <?php include("included/head.php"); ?>
 </head>
 <body>
-    <?php include("included/profile.php"); ?>
-
     <div class="spacer0200"></div>
 
     <div class="text-center d-flex justify-content-evenly">

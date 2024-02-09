@@ -1,6 +1,6 @@
 <div id="profile">
-    被験者コード：<?php echo $_SESSION["code"]; ?>
-    <form action="logout.php">
-        <input type="submit" class="btn btn-outline-secondary" value="ログアウト">
+    <form action="pause.php" method="post">
+        <input type="hidden" name="last_php_name" class="btn btn-outline-secondary" value="<?=$php_name?>">
+        <input type="submit" class="btn btn-outline-secondary" value="| |">
     </form>
 </div>
