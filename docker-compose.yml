@@ -5,6 +5,6 @@ services:
     build: .
     volumes:
       - .:/var/www/html
-      - /Volumes:/var/www/html/Volumes
+      - /Volumes:/var/www/html/Volumes:ro
     ports:
       - 8000:80

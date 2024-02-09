@@ -8,7 +8,8 @@ if (
     isset($_SESSION["code"]) &&
     isset($_POST["mov_idx"])&&
     isset($_POST["x"])&&
-    isset($_POST["y"])
+    isset($_POST["y"])&&
+    isset($_POST["t"])
 ) {
     $code = $_SESSION["code"];
     $day = $_SESSION["day"];
@@ -17,8 +18,10 @@ if (
     $mov_idx = $_POST["mov_idx"];
     $x = $_POST["x"];
     $y = $_POST["y"];
+    $t = $_POST["t"];
     $eval->set($code, $session_id . "_" . $mov_idx . "_x", $x);
     $eval->set($code, $session_id . "_" . $mov_idx . "_y", $y);
+    $eval->set($code, $session_id . "_" . $mov_idx . "_t", $t);
     $res = array("code" => 200);
 } else {
     $res = array("code" => 400);

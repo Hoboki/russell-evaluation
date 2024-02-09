@@ -35,14 +35,17 @@ if (count($movs) <= $mov_idx && count($sessions) <= $session_idx) {
 
 $x = $eval->get($code, $mov_info->getSessionID($day, $session_idx) . "_" . $mov_idx . "_x");
 $y = $eval->get($code, $mov_info->getSessionID($day, $session_idx) . "_" . $mov_idx . "_y");
+$t = $eval->get($code, $mov_info->getSessionID($day, $session_idx) . "_" . $mov_idx . "_t");
 $x = !empty($x)? $x : -10000;
 $y = !empty($y)? $y : -10000;
+$t = !empty($t)? $t : -10000;
 
 $params_json = json_encode(array(
     "code" => $code,
     "mov_idx" => $mov_idx,
     "x" => $x,
     "y" => $y,
+    "t" => $t,
 ));
 ?>
 
@@ -56,7 +59,7 @@ $params_json = json_encode(array(
     <div class="spacer0200"></div>
 
     <div id="main-container" class="row">
-        <video id="movie" controls="false" controlsList="nodownload nofullscreen noremoteplayback" oncontextmenu="return false;" onended="endMovie(event)" autoplay="autoplay" muted="muted">
+        <video id="movie" controls="false" controlsList="nodownload nofullscreen noremoteplayback" oncontextmenu="return false;" onended="endMovie(event)" autoplay="autoplay"> // muted="muted"
             <source src="<?php echo $movs[$mov_idx]; ?>" />
         </video>
         <div id="russell">
@@ -67,6 +70,7 @@ $params_json = json_encode(array(
             <div id="russell-rec" onclick="clickRussellRec(event)">
                 <div class="xaxis"></div>
                 <div class="yaxis"></div>
+                <div class="time"></div>
             </div>
         </div>
     </div>

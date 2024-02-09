@@ -8,12 +8,15 @@ const RUSSELL_RADIUS = 250
 var mov_idx = Number(params.mov_idx)
 var x = Number(params.x)
 var y = Number(params.y)
+var str_choice
+var end_choice
 if (x !== -10000 && y !== -10000) {
     console.log(x, y)
     writePoint(RUSSELL_RADIUS + x, RUSSELL_RADIUS - y)
 }
 
 function endMovie(e) {
+    str_choice = new Date()
     var movie = document.getElementById("movie")
     var btnNextBackGroup = document.getElementById("btn-next-back-group")
     movie.classList.add("ended")
@@ -22,6 +25,7 @@ function endMovie(e) {
 }
 
 function clickRussellRec(e) {
+    end_choice = new Date()
     var offsetX = e.offsetX
     var offsetY = e.offsetY
     var x = offsetX + 2
@@ -34,6 +38,7 @@ function clickRussellRec(e) {
     paramsStore.append("mov_idx", mov_idx)
     paramsStore.append("x", x - RUSSELL_RADIUS)
     paramsStore.append("y", RUSSELL_RADIUS - y)
+    paramsStore.append("t", end_choice - str_choice)
     console.log(...paramsStore.entries())
 
     var options = { // Don't assign Content-Type

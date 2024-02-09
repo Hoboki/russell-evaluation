@@ -18,14 +18,11 @@ if (isset($_SESSION["code"])) {
 
     <div class="text-center">
         <h3>
-            1分間休憩してください。
-        </h3>
-        <h3>
-            残り時間：<span id="rest-time"></span>
+            セッションを開始します
         </h3>
     </div>
 </body>
 </html>
 
 <?php include("included/js.php"); ?>
-<script type="text/javascript" src="rest.js"></script>
+<script type="text/javascript" src="session_str.js"></script>

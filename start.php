@@ -21,7 +21,7 @@ if(isset($_POST["day"])) {
     <div class="spacer01"></div>
 
     <div class="text-center">
-        <form action="evaluation.php">
+        <form action="session_str.php">
             <input type="submit" class="btn btn-primary" value="開始">
         </form>
     </div>
