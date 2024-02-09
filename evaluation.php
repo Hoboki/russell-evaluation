@@ -23,7 +23,7 @@ $sessions = $mov_info->model[$day];
 $session_idx = get_session_session_idx();
 $mov_idx = get_session_mov_idx();
 $movs = glob($sessions[$session_idx]["glob"]);
-if (count($movs) <= $mov_idx && count($sessions) <= $session_idx) {
+if (count($movs) <= $mov_idx && count($sessions) - 1 <= $session_idx) {
     header("Location: finish.php");
     exit;
 } else if (count($movs) <= $mov_idx) {
