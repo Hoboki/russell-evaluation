@@ -1,3 +1,12 @@
+body {
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
 .xaxis {
     position: absolute;
     height: 50%;
@@ -65,21 +74,32 @@
 }
 
 #movie {
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+    width: 100vw;
+    height: 100vh;
+    vertical-align: bottom;
+    background-color: black;
+    /* position: absolute;
     width: 1200px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: all 1s 1s linear;
+    transition: all 1s 1s linear; */
 }
 
 #russell {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
     visibility: hidden;
     opacity: 0;
-    transition: all 1s 1.5s linear;
+    transition: all 0.5s 0s linear;
 }
 
 #russell-rec {
@@ -89,6 +109,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background: white;
     border: 2px solid black;
     cursor: crosshair;
 }

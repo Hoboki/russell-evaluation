@@ -1,5 +1,6 @@
 <?php
 include("included/session_start.php");
+$_SESSION["session_idx"]++;
 if (isset($_SESSION["code"])) {
     $code = $_SESSION["code"];
 } else {
@@ -18,10 +19,10 @@ if (isset($_SESSION["code"])) {
 
     <div class="text-center">
         <h3>
-            1分間休憩してください。
+            １分間休憩してください。
         </h3>
         <h3>
-            残り時間：<span id="rest-time"></span>
+            残り時間：<span class=span id="rest-time"></span> 秒
         </h3>
     </div>
 </body>

@@ -6,10 +6,10 @@ const restTime = document.getElementById("rest-time")
 var interval = setInterval(() => {
     var now = new Date()
     var diff = now - start
-    restTime.innerText = `${REST_TIME_SECOND - Math.floor(diff/1000)}秒`
+    restTime.innerText = `${REST_TIME_SECOND - Math.floor(diff/1000)}`
     if (REST_TIME_SECOND * 1000 <= diff) {
         stopInterval()
-        window.location.href = "session_str.php"
+        window.location.href = "ready.php"
     }
 }, 10)
 
