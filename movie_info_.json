@@ -10,78 +10,18 @@
             ]
         },
         {
-            "id": "Trn01",
-            "glob": "Volumes/Share/stimulus/movie/NishidaVimeo2/ForLabeling/Trn01*"
+            "id": "S1",
+            "glob": "movie_sample/mov1*"
         },
         {
-            "id": "Trn02",
-            "glob": "Volumes/Share/stimulus/movie/NishidaVimeo2/ForLabeling/Trn02*"
-        },
-        {
-            "id": "Trn03",
-            "glob": "Volumes/Share/stimulus/movie/NishidaVimeo2/ForLabeling/Trn03*"
-        },
-        {
-            "id": "Trn04",
-            "glob": "Volumes/Share/stimulus/movie/NishidaVimeo2/ForLabeling/Trn04*"
-        },
-        {
-            "id": "Trn05",
-            "glob": "Volumes/Share/stimulus/movie/NishidaVimeo2/ForLabeling/Trn05*"
-        },
-        {
-            "id": "Trn06",
-            "glob": "Volumes/Share/stimulus/movie/NishidaVimeo2/ForLabeling/Trn06*"
-        },
-        {
-            "id": "Trn07",
-            "glob": "Volumes/Share/stimulus/movie/NishidaVimeo2/ForLabeling/Trn07*"
-        },
-        {
-            "id": "Trn08",
-            "glob": "Volumes/Share/stimulus/movie/NishidaVimeo2/ForLabeling/Trn08*"
+            "id": "S2",
+            "glob": "movie_sample/mov2*"
         }
     ],
     [
         {
-            "id": "Val01",
-            "glob": "Volumes/Share/stimulus/movie/NishidaVimeo2/ForLabeling/Val01*"
-        },
-        {
-            "id": "Val02",
-            "glob": "Volumes/Share/stimulus/movie/NishidaVimeo2/ForLabeling/Val02*"
-        },
-        {
-            "id": "Val03",
-            "glob": "Volumes/Share/stimulus/movie/NishidaVimeo2/ForLabeling/Val03*"
-        },
-        {
-            "id": "Val04",
-            "glob": "Volumes/Share/stimulus/movie/NishidaVimeo2/ForLabeling/Val04*"
-        },
-        {
-            "id": "Trn09",
-            "glob": "Volumes/Share/stimulus/movie/NishidaVimeo2/ForLabeling/Trn09*"
-        },
-        {
-            "id": "Trn10",
-            "glob": "Volumes/Share/stimulus/movie/NishidaVimeo2/ForLabeling/Trn10*"
-        },
-        {
-            "id": "Trn11",
-            "glob": "Volumes/Share/stimulus/movie/NishidaVimeo2/ForLabeling/Trn11*"
-        },
-        {
-            "id": "Trn12",
-            "glob": "Volumes/Share/stimulus/movie/NishidaVimeo2/ForLabeling/Trn12*"
-        },
-        {
-            "id": "Trn13",
-            "glob": "Volumes/Share/stimulus/movie/NishidaVimeo2/ForLabeling/Trn13*"
-        },
-        {
-            "id": "Trn14",
-            "glob": "Volumes/Share/stimulus/movie/NishidaVimeo2/ForLabeling/Trn14*"
+            "id": "S3",
+            "glob": "movie_sample/mov3*"
         }
     ]
 ]
