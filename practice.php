@@ -82,7 +82,7 @@ $params_json = json_encode(array(
 </body>
 </html>
 
-<?php include("included/js.php"); 
+<?php include("included/js.php");
 $_SESSION["mov_idx"]++;
 ?>
 <script>
@@ -95,7 +95,7 @@ $_SESSION["mov_idx"]++;
         str_choice = Date.now()
         target.classList.add("ended")
         russell.classList.add("active")
-        btnNextBackGroup.classList.add("active")
+        // btnNextBackGroup.classList.add("active")
     }, DISPLAY_TIME_SECOND*1000);
 </script>
 <script type="text/javascript" src="evaluation.js"></script>
