@@ -1,6 +1,6 @@
 # Russell evaluation for movie set
 
-[all.gif](https://raw.githubusercontent.com/Hoboki/russell-evaluation/main/images/all.gif)
+![all.gif](https://raw.githubusercontent.com/Hoboki/russell-evaluation/main/images/all.gif)
 
 ## TODO before starting development
 
