@@ -25,7 +25,7 @@ var interval = setInterval(() => {
         clearInterval(interval)
         window.location.href = next_php_name
     }
-}, 100);
+}, 100)
 
 function endMovie(e) {
     str_choice = Date.now()
