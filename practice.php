@@ -82,7 +82,7 @@ $params_json = json_encode(array(
 </body>
 </html>
 
-<?php include("included/js.php"); 
+<?php include("included/js.php");
 $_SESSION["mov_idx"]++;
 ?>
 <script>
