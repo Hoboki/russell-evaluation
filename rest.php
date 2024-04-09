@@ -7,17 +7,32 @@ if (isset($_SESSION["code"])) {
     header("Location: index.php");
     exit;
 }
+if ($_SESSION["day"]==0) {
+    $_SESSION["day"] = 1;
+    $next_php_name = "init_setting.php";
+} else {
+    $next_php_name = "ready.php";
+}
 ?>
 
 <?php include("included/declaration.php"); ?>
 <head>
     <?php include("included/head.php"); ?>
+    <style>
+    #target {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 50px;
+    }
+    </style>
 </head>
 <body>
     <?php include("included/profile.php"); ?>
     <div class="spacer0500"></div>
 
-    <div class="text-center">
+    <div class="text-center" id="target">
         <h3>
             １分間休憩してください。
         </h3>
@@ -29,4 +44,7 @@ if (isset($_SESSION["code"])) {
 </html>
 
 <?php include("included/js.php"); ?>
+<script>
+    next_php_name = '<?php echo $next_php_name; ?>'
+</script>
 <script type="text/javascript" src="rest.js"></script>

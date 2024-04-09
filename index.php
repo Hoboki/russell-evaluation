@@ -10,9 +10,9 @@ if (isset($_SESSION["code"])) {
     $code = $_SESSION["code"];
     if (array_search($code, $eval->codes)===false) {
         $eval->makeCode($code);
-        header("Location: explain.php?first=true");
+        header("Location: day.php?first=true");
     } else {
-        header("Location: explain.php");
+        header("Location: day.php");
     }
     exit;
 }

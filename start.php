@@ -1,3 +1,5 @@
+<!-- 使っていません 前田 2024/04/09 -->
+
 <?php
 include("included/session_start.php");
 if(isset($_POST["day"])) {
@@ -9,7 +11,6 @@ if(isset($_POST["day"])) {
     header("Location: day.php");
     exit;
 }
-
 ?>
 
 <?php include("included/declaration.php"); ?>
