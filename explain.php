@@ -1,17 +1,18 @@
 <?php
 include("included/session_start.php");
-if(isset($_POST["day"])) {
-    $day = $_POST["day"];
-    $_SESSION["day"] = $day;
-    $_SESSION["session_idx"] = 0;
-    $_SESSION["mov_idx"] = 0;
+if (isset($_SESSION["day"])) {
+    if ($_SESSION["day"]==0) {
+        $explain_file = "included/explain_day1.php";
+    } else {
+        $explain_file = "included/explain_day2.php";
+    }
 } else {
     header("Location: day.php");
     exit;
 }
+include("included/declaration.php");
 ?>
 
-<?php include("included/declaration.php"); ?>
 <head>
     <?php include("included/head.php"); ?>
     <link rel="stylesheet" type="text/css" href="evaluation.css" />
@@ -23,34 +24,37 @@ if(isset($_POST["day"])) {
     li {
         padding: 10px 0;
         line-height:30px;
-        /* font-size:19px; */
+        font-size:20px;
     }
     .clearfix:after {
         content:"";
         display:block;
     }
     .explain-txt {
-        width: 1000px;
+        width: 1200px;
         float: left;
         height: auto;
         position: absolute;
         top: 50%;
         transform: translate(-70%, -50%);
+        left: 48%;
     }
     .explain-img {
         float: right;
         object-fit: contain;
-        width: 500px;
+        width: 600px;
         height: auto;
         position: absolute;
         top: 50%;
-        transform: translate(45%, -50%);
+        transform: translate(0, -50%);
+        right: 4%;
     }
     .explain-btn {
         float: none;
         position: absolute;
         bottom: 10%;
-        right: 15%;
+        right: 5%;
+        width: 400px;
     }
     </style>
 </head>
@@ -79,12 +83,26 @@ if(isset($_POST["day"])) {
                 </ul>
             </div>
             <img src="russelu_map.png" alt="russelu-map" class="explain-img">
-            <form action="ready.php">
-                <input type="submit" class="btn btn-primary explain-btn" value="開始">
-            </form>
+            <table class="explain-btn">
+            <tr>
+            <td>
+                <form action="practice.php">
+                    <input type="submit" class="btn btn-primary" value="練習">
+                </form>
+            </td>
+            <td>
+                <form action="ready.php">
+                    <input type="submit" class="btn btn-primary" value="開始">
+                </form>
+            </td>
+            </tr>
+            </table>
         </section>
     </div>
 </body>
 </html>
 
 <?php include("included/js.php"); ?>
+<script>
+    console.log (<?php echo $explain_file; ?>);
+</script>

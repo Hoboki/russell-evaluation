@@ -25,15 +25,9 @@ $mov_idx = get_session_mov_idx();
 $movs = glob($sessions[$session_idx]["glob"]);
 if (count($movs) <= $mov_idx+1 && count($sessions) <= $session_idx+1) {
     $next_php_name = "finish.php";
-    // if (count($movs) <= $mov_idx && count($sessions) <= $session_idx) {
-    // header("Location: finish.php");
-    // exit;
 } else if (count($movs) <= $mov_idx+1) {
-    // $_SESSION["session_idx"]++;
     $_SESSION["mov_idx"] = 0;
     $next_php_name = "rest.php";
-    // header("Location: rest.php");
-    // exit;
 } else {
     $next_php_name = "fixation.php";
 }

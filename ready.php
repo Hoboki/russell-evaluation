@@ -8,25 +8,31 @@ if (isset($_SESSION["code"])) {
     exit;
 }
 if ($_SESSION["session_idx"]==0 && $_SESSION["day"]==0 && $_SESSION["mov_idx"]==0) {
-    $_SESSION["eval_php"] = "practice.php";
-    $session_name = "練習セッションを開始します";
+    $_SESSION["eval_php"] = "text_evaluation.php";
 } else {
     $_SESSION["eval_php"] = "evaluation.php";
-    $session_name = "本番セッションを開始します";
 }
 ?>
 
 <?php include("included/declaration.php"); ?>
 <head>
     <?php include("included/head.php"); ?>
+    <style>
+    #target {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 50px;
+    }
+    </style>
 </head>
 <body>
-    <?php include("included/profile.php"); ?>
-    <div class="spacer0500"></div>
-
+    <!-- <?php include("included/profile.php"); ?> -->
+    <!-- <div class="spacer0500"></div> -->
     <div class="text-center">
-        <h3>
-            <?php echo $session_name ?>
+        <h3 id="target">
+        セッションを開始します
         </h3>
     </div>
 </body>

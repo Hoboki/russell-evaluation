@@ -7,6 +7,9 @@ $next_php_name = $_SESSION["eval_php"]
 <head>
     <?php include("included/head.php"); ?>
     <style>
+        .cursor_none {
+            cursor: none;
+        }
         .cross {
             position: absolute;
             top: 50%;
@@ -28,7 +31,7 @@ $next_php_name = $_SESSION["eval_php"]
         }
     </style>
 </head>
-<body>
+<body class="cursor_none">
     <div>
         <div class="cross"></div>
     </div>

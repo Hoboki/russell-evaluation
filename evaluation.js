@@ -21,7 +21,6 @@ const choiceTime = document.getElementById("rest-time")
 
 var interval = setInterval(() => {
     var current_time = Date.now()
-    console.log(next_php_name)
     if (current_time - str_choice >= 5000 && chose) {
         clearInterval(interval)
         window.location.href = next_php_name

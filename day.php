@@ -12,11 +12,15 @@ $mov_info = new MovieInfoController();
     <div class="spacer0200"></div>
 
     <div class="text-center d-flex justify-content-evenly">
+        <form action="init_setting.php" method="post">
+            <input type="hidden" name="day" class="btn btn-primary" value=0 />
+            <input type="submit" class="btn btn-primary" value="1日目" />
+        </form>
         <?php
-        for ($i = 0; $i < count($mov_info->model); $i++) {
-            echo '<form action="explain.php" method="post">';
+        for ($i = 2; $i < count($mov_info->model); $i++) {
+            echo '<form action="init_setting.php" method="post">';
             echo '<input type="hidden" name="day" class="btn btn-primary" value="' . $i. '" />';
-            echo '<input type="submit" class="btn btn-primary" value="' . ($i+1) . '日目" />';
+            echo '<input type="submit" class="btn btn-primary" value="' . $i. '日目" />';
             echo '</form>';
         }
         ?>
