@@ -22,12 +22,6 @@ body {
     padding: 0 3px;
 }
 
-.span {
-    display: inline-block;
-	width: 40px;
-    text-align: right;
-}
-
 .d-none {
     display: none;
 }

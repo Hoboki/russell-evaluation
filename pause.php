@@ -37,7 +37,7 @@ if ($_SESSION["day"]==0) {
 </head>
 <body>
     <div class="text-center" id="target">
-        <h1><b>実験者を呼んでください。</b></h1></br></br>
+        <h1>実験者にお声がけください。</h1></br></br>
         <h4>被験者氏名： <?php echo $_SESSION["code"] ?> 様</h4>
         <div class="d-flex justify-content-evenly">
             <form action="<?php echo $last_php_name ?>">
