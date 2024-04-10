@@ -25,15 +25,17 @@ var interval = setInterval(() => {
         clearInterval(interval)
         window.location.href = next_php_name
     }
-}, 100);
+}, 100)
 
 function endMovie(e) {
     str_choice = Date.now()
     var movie = document.getElementById("movie")
     var btnNextBackGroup = document.getElementById("btn-next-back-group")
-    movie.classList.add("ended")
+    if (movie) {
+        movie.classList.add("ended")
+    }
     russell.classList.add("active")
-    btnNextBackGroup.classList.add("active")
+    // btnNextBackGroup.classList.add("active")
 }
 
 function clickRussellRec(e) {

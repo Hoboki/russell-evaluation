@@ -44,9 +44,6 @@ if($_SESSION["day"]==0) {
 </body>
 </html>
 
-<?php include("included/js.php"); 
-$_SESSION["mov_idx"]++;
-?>
 <script>
     russell.classList.add("active")
     str_choice = Date.now()
