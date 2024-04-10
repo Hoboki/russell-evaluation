@@ -13,8 +13,8 @@ $mov_info = new MovieInfoController();
 
     <div class="text-center d-flex justify-content-evenly">
         <form action="init_setting.php" method="post">
-            <input type="hidden" name="day" class="btn btn-primary" value=0 />
-            <input type="submit" class="btn btn-primary" value="1日目" />
+            <input type="hidden" name="day" class="btn btn-primary" value="0">
+            <input type="submit" class="btn btn-primary" value="1日目">
         </form>
         <?php
         for ($i = 2; $i < count($mov_info->model); $i++) {

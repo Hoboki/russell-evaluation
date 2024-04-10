@@ -7,9 +7,6 @@ $next_php_name = $_SESSION["eval_php"]
 <head>
     <?php include("included/head.php"); ?>
     <style>
-        .cursor_none {
-            cursor: none;
-        }
         .cross {
             position: absolute;
             top: 50%;
@@ -31,7 +28,11 @@ $next_php_name = $_SESSION["eval_php"]
         }
     </style>
 </head>
-<body class="cursor_none">
+<body>
+    <?php
+    $php_name = basename(__FILE__);
+    include("included/profile.php");
+    ?>
     <div>
         <div class="cross"></div>
     </div>

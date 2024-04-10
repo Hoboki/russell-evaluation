@@ -38,7 +38,7 @@ function endMovie(e) {
     // btnNextBackGroup.classList.add("active")
 }
 
-function clickRussellRec(e) {
+function clickRussellRec(e, flag) {
     end_choice = Date.now()
     var offsetX = e.offsetX
     var offsetY = e.offsetY
@@ -46,6 +46,9 @@ function clickRussellRec(e) {
     var y = offsetY + 2
     console.log(x, y)
     writePoint(x, y)
+    if (flag!=true) {
+        return
+    }
 
     //Store Russell data
     var paramsStore = new FormData()

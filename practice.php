@@ -29,13 +29,12 @@ if($_SESSION["day"]==0) {
     include("included/profile.php");
     ?>
     <div id="main-container" class="row">
-        <!-- <div id="target" class="text-center"><b><?php echo $movs[$mov_idx] ?></b></div> -->
         <div id="russell">
             <div class="xplus">快</div>
             <div class="xminus">不快</div>
             <div class="yplus">覚醒</div>
             <div class="yminus">眠気</div>
-            <div id="russell-rec" onclick="clickRussellRec(event)">
+            <div id="russell-rec" onclick="clickRussellRec(event, false)">
                 <div class="xaxis"></div>
                 <div class="yaxis"></div>
                 <div class="time"></div>
@@ -50,10 +49,5 @@ if($_SESSION["day"]==0) {
 
 <script>
     russell.classList.add("active")
-    str_choice = Date.now()
-    var params = JSON.parse('<?php echo $params_json; ?>')
-    var target = document.getElementById("target")
-    var btnNextBackGroup = document.getElementById("btn-next-back-group")
-    next_php_name = 'practice.php'
 </script>
 <script type="text/javascript" src="evaluation.js"></script>

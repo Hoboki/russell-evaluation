@@ -1,13 +1,6 @@
 <?php
 include("included/session_start.php");
-$_SESSION["mov_idx"] = 0;
-if (isset($_SESSION["code"])) {
-    $code = $_SESSION["code"];
-} else {
-    header("Location: index.php");
-    exit;
-}
-if ($_SESSION["session_idx"]==0 && $_SESSION["day"]==0 && $_SESSION["mov_idx"]==0) {
+if ($_SESSION["day"]==0) {
     $_SESSION["eval_php"] = "text_evaluation.php";
 } else {
     $_SESSION["eval_php"] = "evaluation.php";
@@ -28,8 +21,10 @@ if ($_SESSION["session_idx"]==0 && $_SESSION["day"]==0 && $_SESSION["mov_idx"]==
     </style>
 </head>
 <body>
-    <!-- <?php include("included/profile.php"); ?> -->
-    <!-- <div class="spacer0500"></div> -->
+    <?php
+    $php_name = basename(__FILE__);
+    include("included/profile.php");
+    ?>
     <div class="text-center">
         <h3 id="target">
         セッションを開始します

@@ -75,7 +75,7 @@ include("included/declaration.php");
                 <header><h2></br>その他</h2></header>
                 <ul>
                     <li>それぞれの語句が提示される前に、画面中央に十字マークが表示されます。表示中は常に十字マークを注視してください。</li>
-                    <li>途中で気分が悪くなるなどした場合は、実験を中断または中止いたしますので、実験者にお伝えください。</li>
+                    <li>途中で気分が悪くなるなど実験を一時中断または中止したい場合は、画面右上のボタンを押して実験者にお声かけください。</li>
                     <li>実験内容に関して質問があれば、実験者にお尋ねください。</li>
                 </ul>
             </div>
@@ -100,6 +100,3 @@ include("included/declaration.php");
 </html>
 
 <?php include("included/js.php"); ?>
-<script>
-    console.log (<?php echo $explain_file; ?>);
-</script>

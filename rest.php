@@ -1,12 +1,7 @@
 <?php
 include("included/session_start.php");
 $_SESSION["mov_idx"] = 0;
-if (isset($_SESSION["code"])) {
-    $code = $_SESSION["code"];
-} else {
-    header("Location: index.php");
-    exit;
-}
+$_SESSION["session_idx"]++;
 if ($_SESSION["day"]==0) {
     $_SESSION["day"] = 1;
     $next_php_name = "init_setting.php";
@@ -26,6 +21,9 @@ if ($_SESSION["day"]==0) {
         transform: translate(-50%,-50%);
         font-size: 50px;
     }
+    .fs {
+        font-size: 50px
+    }
     </style>
 </head>
 <body>
@@ -36,10 +34,10 @@ if ($_SESSION["day"]==0) {
     <div class="spacer0500"></div>
 
     <div class="text-center" id="target">
-        <h3>
+        <h3 class="fs">
             １分間休憩してください。
         </h3>
-        <h3>
+        <h3 class="fs">
             残り時間：<span class=span id="rest-time"></span> 秒
         </h3>
     </div>

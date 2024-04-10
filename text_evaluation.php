@@ -5,17 +5,6 @@ include("controller/EvaluationController.php");
 include("controller/MovieInfoController.php");
 $eval = new EvaluationController();
 $mov_info = new MovieInfoController();
-if (isset($_POST["day"])) {
-    $_SESSION["day"] = $_POST["day"];
-}
-
-if (isset($_POST["session_idx"])) {
-    $_SESSION["session_idx"] = $_POST["session_idx"];
-}
-
-if (isset($_POST["mov_idx"])) {
-    $_SESSION["mov_idx"] = $_POST["mov_idx"];
-}
 
 $code = get_session_code();
 $day = get_session_day();
@@ -66,7 +55,7 @@ $params_json = json_encode(array(
             <div class="xminus">不快</div>
             <div class="yplus">覚醒</div>
             <div class="yminus">眠気</div>
-            <div id="russell-rec" onclick="clickRussellRec(event)">
+            <div id="russell-rec" onclick="clickRussellRec(event, true)">
                 <div class="xaxis"></div>
                 <div class="yaxis"></div>
                 <div class="time"></div>
