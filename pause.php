@@ -4,6 +4,12 @@ $last_php_name = $_POST["last_php_name"];
 
 switch ($last_php_name) {
     case "rest.php":
+        if ($_SESSION["day"]==0) {
+            $last_php_name = "init_setting.php";
+        } else {
+            $last_php_name = "ready.php";
+        }
+        break;
     case "fixation.php":
         $last_php_name = "ready.php";
         break;
@@ -18,6 +24,12 @@ if ($_SESSION["day"]==0) {
     $explain_php_name = "text_explain.php";
 } else {
     $explain_php_name = "movie_explain.php";
+}
+
+if ($last_php_name = "init_setting.php") {
+    $explain_php_name = "init_setting.php";
+} elseif ($last_php_name = "finish.php") {
+    $explain_php_name = "logout.php";
 }
 ?>
 
@@ -41,13 +53,13 @@ if ($_SESSION["day"]==0) {
         <h4>被験者氏名： <?php echo $_SESSION["code"] ?> 様</h4>
         <div class="d-flex justify-content-evenly">
             <form action="<?php echo $last_php_name ?>">
-                <input type="submit" class="btn btn-primary" value="戻る">
+                <input type="submit" class="btn btn-primary" value="実験再開">
             </form>
             <form action="logout.php">
                 <input type="submit" class="btn btn-primary" value="ログアウト">
             </form>
             <form action="<?php echo $explain_php_name ?>">
-                <input type="submit" class="btn btn-primary" value="説明">
+                <input type="submit" class="btn btn-primary" value="説明画面">
             </form>
         </div>
     </div>

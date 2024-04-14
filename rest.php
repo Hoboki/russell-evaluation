@@ -3,7 +3,6 @@ include("included/session_start.php");
 $_SESSION["mov_idx"] = 0;
 $_SESSION["session_idx"]++;
 if ($_SESSION["day"]==0) {
-    $_SESSION["day"] = 1;
     $next_php_name = "init_setting.php";
 } else {
     $next_php_name = "ready.php";
@@ -38,7 +37,7 @@ if ($_SESSION["day"]==0) {
             １分間休憩してください。
         </h3>
         <h3 class="fs">
-            残り時間：<span class=span id="rest-time"></span> 秒
+            残り時間：<span style="display: inline-block; width: 60px; text-align: right;" id="rest-time"></span> 秒
         </h3>
     </div>
 </body>
