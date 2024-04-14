@@ -1,6 +1,7 @@
 body {
     margin: 3%;
     background-color: #ddd;
+    user-select: none;
 }
 
 #profile {
