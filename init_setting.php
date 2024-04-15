@@ -5,7 +5,8 @@ if(isset($_POST["day"])) {
     $_SESSION["day"] = $day;
     $_SESSION["session_idx"] = 0;
     $_SESSION["mov_idx"] = 0;
-} elseif (isset($_SESSION["day"]) && $_SESSION["day"]==1) {
+} elseif (isset($_SESSION["day"]) && $_SESSION["day"]==0) {
+    $_SESSION["day"] = 1;
     $_SESSION["session_idx"] = 0;
     $_SESSION["mov_idx"] = 0;
 } else {
