@@ -1,4 +1,4 @@
-const REST_TIME_SECOND = PROD? 60 : 1
+const REST_TIME_SECOND = PROD? 60 : 3
 var start = new Date()
 var next_php_name
 
