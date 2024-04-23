@@ -26,7 +26,7 @@ if ($_SESSION["day"]==0) {
     $explain_php_name = "movie_explain.php";
 }
 
-if ($last_php_name = "init_setting.php") {
+if ($last_php_name=="init_setting.php") {
     $explain_php_name = "init_setting.php";
 } elseif ($last_php_name = "finish.php") {
     $explain_php_name = "logout.php";
