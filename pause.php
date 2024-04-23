@@ -1,4 +1,6 @@
 <?php
+// 停止ボタンを押したら表示される画面
+// TODO: 何事もなかったかのように再開する機能
 include("included/session_start.php");
 $last_php_name = $_POST["last_php_name"];
 
@@ -28,7 +30,7 @@ if ($_SESSION["day"]==0) {
 
 if ($last_php_name=="init_setting.php") {
     $explain_php_name = "init_setting.php";
-} elseif ($last_php_name = "finish.php") {
+} elseif ($last_php_name=="finish.php") {
     $explain_php_name = "logout.php";
 }
 ?>
