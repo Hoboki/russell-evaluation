@@ -1,6 +1,5 @@
-if (!PROD) {
-    endMovie()
-}
+// TODO: マウスカーソルを中心に持ってくる
+
 
 const RUSSELL_RADIUS = 250
 

@@ -21,4 +21,3 @@ if($_SESSION["day"]==0) {
     header("Location: movie_explain.php");
     exit;
 }
-?>
