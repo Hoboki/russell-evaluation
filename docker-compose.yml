@@ -8,3 +8,4 @@ services:
       - /Volumes:/var/www/html/Volumes:ro
     ports:
       - 8000:80
+      - 8002:8002
