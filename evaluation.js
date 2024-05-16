@@ -26,7 +26,7 @@ var interval = setInterval(() => {
     }
 }, 100)
 
-function endMovie(e) {
+async function endMovie(e) {
     str_choice = Date.now()
     var movie = document.getElementById("movie")
     var btnNextBackGroup = document.getElementById("btn-next-back-group")
@@ -34,6 +34,8 @@ function endMovie(e) {
         movie.classList.add("ended")
     }
     russell.classList.add("active")
+    var res = await fetch("http://127.0.0.1:8002")
+    console.log(res)
     // btnNextBackGroup.classList.add("active")
 }
 
